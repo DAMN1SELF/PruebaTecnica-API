@@ -89,5 +89,4 @@ dotnet restore
 dotnet run --project Carrito_Compras
 ```
 3. Accede a Swagger en tu navegador:
-http://localhost:5191/swagger o el POSTMAN https://github.com/DAMN1SELF/PruebaTecnica-API/blob/main/PRUEBA%20TECNICA%20-%20DANIEL%20INCHE.postman_collection.json
-
+http://localhost:5191/swagger o el descarga  [Pruebas POSTMAN](https://github.com/DAMN1SELF/PruebaTecnica-API/blob/main/POSTMAN.postman_collection.json)
