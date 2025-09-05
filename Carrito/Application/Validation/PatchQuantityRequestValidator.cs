@@ -8,13 +8,12 @@ namespace INCHE.Carrito_Compras.Application.Validation
         public PatchQuantityRequestValidator()
         {
             RuleFor(x => x.Delta)
-                .NotEqual(0).WithMessage("Delta no puede ser 0.")
-                .Must(d => Math.Abs(d) <= 10).WithMessage("Delta demasiado grande.");
+                .NotEqual(0).WithMessage("No puede ser 0");
 
 
             RuleFor(x => x.Delta)
-                .Must(d => d >= -1 && d <= 10)
-                .WithMessage("Delta fuera de rango.");
+                .Must(d => d >= -1 && d <= 1)
+                .WithMessage("Delta fuera de rango [-1,1].");
         }
     }
 }
