@@ -37,6 +37,8 @@ builder.Services.AddScoped<IValidator<AddToCartRequest>, AddToCartRequestValidat
 builder.Services.AddScoped<UpdateItemInCart>();
 builder.Services.AddScoped<IValidator<UpdateItemRequest>, UpdateItemRequestValidator>();
 
+builder.Services.AddScoped<PatchItemQuantity>();
+builder.Services.AddScoped<IValidator<PatchQuantityRequest>, PatchQuantityRequestValidator>();
 
 builder.Services.AddScoped<GetCart>();
 builder.Services.AddScoped<ICartMapper, CartMapper>();

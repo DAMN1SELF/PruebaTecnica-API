@@ -19,9 +19,14 @@ namespace CarritoCompras.Controllers
         private readonly IValidator<UpdateItemRequest> _updateValidator;
         private readonly GetCart _getCart;
         private readonly ICartMapper _mapper;
+
+        private readonly PatchItemQuantity _patchQuantity;
+        private readonly IValidator<PatchQuantityRequest> _patchValidator;
         public CartsController(
          AddItemToCart addItem, IValidator<AddToCartRequest> addValidator,
          UpdateItemInCart updateItem, IValidator<UpdateItemRequest> updateValidator,
+         PatchItemQuantity patchQuantity,IValidator<PatchQuantityRequest> patchValidator,
+
          GetCart getCart,
          ICartMapper mapper
         )
@@ -31,8 +36,9 @@ namespace CarritoCompras.Controllers
             _getCart = getCart;
             _addValidator = addValidator; 
             _updateItem = updateItem; 
-            _updateValidator = updateValidator;
-
+            _updateValidator = updateValidator; 
+            _patchQuantity = patchQuantity;
+            _patchValidator = patchValidator;
         }
 
         [HttpPost("producto")]
@@ -55,6 +61,19 @@ namespace CarritoCompras.Controllers
             if (!vr.IsValid) return BadRequest(ToError(vr));
 
             var res = _updateItem.Execute(cartId, itemId, body);
+            if (!res.EsExitoso) return UnprocessableEntity(new { error = res.Error });
+
+            var (cart, _) = _getCart.Execute(cartId);
+            return Ok(_mapper.ToResponse(cart!));
+        }
+
+        [HttpPatch("producto/{itemId:guid}")]
+        public ActionResult<CartResponse> PatchQuantity(string cartId, Guid itemId, [FromBody] PatchQuantityRequest body)
+        {
+            ValidationResult vr = _patchValidator.Validate(body);
+            if (!vr.IsValid) return BadRequest(ToError(vr));
+
+            var res = _patchQuantity.Execute(cartId, itemId, body.Delta);
             if (!res.EsExitoso) return UnprocessableEntity(new { error = res.Error });
 
             var (cart, _) = _getCart.Execute(cartId);
