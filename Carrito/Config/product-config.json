@@ -1,0 +1,550 @@
+{
+  "productId": 3546345,
+  "name": "Mi Producto",
+  "price": 11.90,
+  "groupAttributes": [
+    {
+      "groupAttributeId": "241887",
+      "groupAttributeType": {
+        "groupAttributeTypeId": "1826",
+        "name": "Elige el tipo de pan"
+      },
+      "description": "Tipo de pan",
+      "quantityInformation": {
+        "groupAttributeQuantity": 1,
+        "showPricePerProduct": true,
+        "isShown": true,
+        "isEditable": true,
+        "isVerified": true,
+        "verifyValue": "EQUAL_THAN"
+      },
+      "attributes": [
+        {
+          "productId": 13300,
+          "attributeId": 968636,
+          "name": "Pan Premium",
+          "defaultQuantity": 1,
+          "maxQuantity": 1,
+          "priceImpactAmount": 0,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 13301,
+          "attributeId": 968637,
+          "name": "Pan Grande",
+          "defaultQuantity": 0,
+          "maxQuantity": 1,
+          "priceImpactAmount": 0,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        }
+      ],
+      "order": 1
+    },
+    {
+      "groupAttributeId": "241888",
+      "groupAttributeType": {
+        "groupAttributeTypeId": "1848",
+        "name": "�Deseas m�s carnes? (opcional)"
+      },
+      "description": "Ad Carnes",
+      "quantityInformation": {
+        "groupAttributeQuantity": 4,
+        "showPricePerProduct": true,
+        "isShown": true,
+        "isEditable": true,
+        "isVerified": true,
+        "verifyValue": "LOWER_EQUAL_THAN"
+      },
+      "attributes": [
+        {
+          "productId": 1322,
+          "attributeId": 968639,
+          "name": "Carne XT",
+          "defaultQuantity": 0,
+          "maxQuantity": 4,
+          "priceImpactAmount": 6,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 13176,
+          "attributeId": 968640,
+          "name": "Carne Vegetal",
+          "defaultQuantity": 0,
+          "maxQuantity": 4,
+          "priceImpactAmount": 5,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 1325,
+          "attributeId": 968641,
+          "name": "Carne Brava",
+          "defaultQuantity": 0,
+          "maxQuantity": 4,
+          "priceImpactAmount": 4,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 1324,
+          "attributeId": 968642,
+          "name": "Carne Tradicional",
+          "defaultQuantity": 0,
+          "maxQuantity": 4,
+          "priceImpactAmount": 4,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 13174,
+          "attributeId": 968643,
+          "name": "Pollo",
+          "defaultQuantity": 0,
+          "maxQuantity": 4,
+          "priceImpactAmount": 3,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 4230,
+          "attributeId": 968644,
+          "name": "Chorizo",
+          "defaultQuantity": 0,
+          "maxQuantity": 4,
+          "priceImpactAmount": 3,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        }
+      ],
+      "order": 2
+    },
+    {
+      "groupAttributeId": "241889",
+      "groupAttributeType": {
+        "groupAttributeTypeId": "90",
+        "name": "Personaliza tus toppings (opcional)"
+      },
+      "description": "Ad Toppings",
+      "quantityInformation": {
+        "groupAttributeQuantity": 5,
+        "showPricePerProduct": true,
+        "isShown": true,
+        "isEditable": true,
+        "isVerified": true,
+        "verifyValue": "LOWER_EQUAL_THAN"
+      },
+      "attributes": [
+        {
+          "productId": 6281,
+          "attributeId": 968646,
+          "name": "Queso americano (2 lascas)",
+          "defaultQuantity": 1,
+          "maxQuantity": 5,
+          "priceImpactAmount": 2,
+          "isRequired": true,
+          "negativeAttributeId": "963",
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 950,
+          "attributeId": 968647,
+          "name": "Tocino (2 lascas)",
+          "defaultQuantity": 1,
+          "maxQuantity": 5,
+          "priceImpactAmount": 2,
+          "isRequired": true,
+          "negativeAttributeId": "965",
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 954,
+          "attributeId": 968648,
+          "name": "Tomate",
+          "defaultQuantity": 1,
+          "maxQuantity": 5,
+          "priceImpactAmount": 0,
+          "isRequired": true,
+          "negativeAttributeId": "968",
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 953,
+          "attributeId": 968649,
+          "name": "Lechuga",
+          "defaultQuantity": 1,
+          "maxQuantity": 5,
+          "priceImpactAmount": 0,
+          "isRequired": true,
+          "negativeAttributeId": "967",
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 6629,
+          "attributeId": 968650,
+          "name": "Papas al hilo",
+          "defaultQuantity": 0,
+          "maxQuantity": 5,
+          "priceImpactAmount": 1,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 956,
+          "attributeId": 968652,
+          "name": "Pickles",
+          "defaultQuantity": 0,
+          "maxQuantity": 5,
+          "priceImpactAmount": 0,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 955,
+          "attributeId": 968653,
+          "name": "Cebolla",
+          "defaultQuantity": 0,
+          "maxQuantity": 5,
+          "priceImpactAmount": 0,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        }
+      ],
+      "order": 3
+    },
+    {
+      "groupAttributeId": "241890",
+      "groupAttributeType": {
+        "groupAttributeTypeId": "1854",
+        "name": "Personaliza tus salsas (opcional)"
+      },
+      "description": "Ad Salsas",
+      "quantityInformation": {
+        "groupAttributeQuantity": 5,
+        "showPricePerProduct": true,
+        "isShown": true,
+        "isEditable": true,
+        "isVerified": true,
+        "verifyValue": "LOWER_EQUAL_THAN"
+      },
+      "attributes": [
+        {
+          "productId": 957,
+          "attributeId": 968655,
+          "name": "Mayonesa",
+          "defaultQuantity": 1,
+          "maxQuantity": 5,
+          "priceImpactAmount": 0,
+          "isRequired": true,
+          "negativeAttributeId": "971",
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 961,
+          "attributeId": 968656,
+          "name": "Salsa Stacker",
+          "defaultQuantity": 0,
+          "maxQuantity": 5,
+          "priceImpactAmount": 1,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 960,
+          "attributeId": 968657,
+          "name": "Salsa BBQ",
+          "defaultQuantity": 0,
+          "maxQuantity": 5,
+          "priceImpactAmount": 1,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 959,
+          "attributeId": 968658,
+          "name": "Ketchup",
+          "defaultQuantity": 0,
+          "maxQuantity": 5,
+          "priceImpactAmount": 0,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 958,
+          "attributeId": 968659,
+          "name": "Mostaza",
+          "defaultQuantity": 0,
+          "maxQuantity": 5,
+          "priceImpactAmount": 0,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 6630,
+          "attributeId": 968660,
+          "name": "Aj�",
+          "defaultQuantity": 0,
+          "maxQuantity": 5,
+          "priceImpactAmount": 0,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 13179,
+          "attributeId": 968661,
+          "name": "Salsa Stacker Gratis",
+          "defaultQuantity": 0,
+          "maxQuantity": 1,
+          "priceImpactAmount": 0,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 13178,
+          "attributeId": 968662,
+          "name": "Salsa BBQ Gratis",
+          "defaultQuantity": 0,
+          "maxQuantity": 1,
+          "priceImpactAmount": 0,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        }
+      ],
+      "order": 4
+    },
+    {
+      "groupAttributeId": "241891",
+      "groupAttributeType": {
+        "groupAttributeTypeId": "106",
+        "name": "Elige tu complemento"
+      },
+      "description": null,
+      "quantityInformation": {
+        "groupAttributeQuantity": 1,
+        "showPricePerProduct": true,
+        "isShown": true,
+        "isEditable": true,
+        "isVerified": true,
+        "verifyValue": "EQUAL_THAN"
+      },
+      "attributes": [
+        {
+          "productId": 930,
+          "attributeId": 968663,
+          "name": "Papa Personal",
+          "defaultQuantity": 1,
+          "maxQuantity": 1,
+          "priceImpactAmount": 0,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 10459,
+          "attributeId": 968664,
+          "name": "Papa Familiar",
+          "defaultQuantity": 0,
+          "maxQuantity": 1,
+          "priceImpactAmount": 3,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 11748,
+          "attributeId": 968665,
+          "name": "Papa Tumbay Mediana",
+          "defaultQuantity": 0,
+          "maxQuantity": 1,
+          "priceImpactAmount": 1,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 11877,
+          "attributeId": 968666,
+          "name": "Papa Tumbay Familiar",
+          "defaultQuantity": 0,
+          "maxQuantity": 1,
+          "priceImpactAmount": 4,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 13295,
+          "attributeId": 968667,
+          "name": "Camote Mediano",
+          "defaultQuantity": 0,
+          "maxQuantity": 1,
+          "priceImpactAmount": 1,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 13298,
+          "attributeId": 968668,
+          "name": "Camote Familiar",
+          "defaultQuantity": 0,
+          "maxQuantity": 1,
+          "priceImpactAmount": 4,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        }
+      ],
+      "order": 5
+    },
+    {
+      "groupAttributeId": "241892",
+      "groupAttributeType": {
+        "groupAttributeTypeId": "91",
+        "name": "Elige tu bebida"
+      },
+      "description": null,
+      "quantityInformation": {
+        "groupAttributeQuantity": 1,
+        "showPricePerProduct": false,
+        "isShown": true,
+        "isEditable": true,
+        "isVerified": true,
+        "verifyValue": "EQUAL_THAN"
+      },
+      "attributes": [
+        {
+          "productId": 935,
+          "attributeId": 968670,
+          "name": "Coca-Cola Sin Az�car 500 ml",
+          "defaultQuantity": 0,
+          "maxQuantity": 1,
+          "priceImpactAmount": 0,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 938,
+          "attributeId": 968671,
+          "name": "Inca Kola Sin Az�car 500 ml",
+          "defaultQuantity": 0,
+          "maxQuantity": 1,
+          "priceImpactAmount": 0,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 939,
+          "attributeId": 968674,
+          "name": "Fanta 500 ml",
+          "defaultQuantity": 0,
+          "maxQuantity": 1,
+          "priceImpactAmount": 0,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        },
+        {
+          "productId": 933,
+          "attributeId": 968677,
+          "name": "Agua San Luis Sin Gas 625 ml",
+          "defaultQuantity": 0,
+          "maxQuantity": 1,
+          "priceImpactAmount": 0,
+          "isRequired": false,
+          "negativeAttributeId": null,
+          "order": 0,
+          "statusId": "A",
+          "urlImage": null
+        }
+      ],
+      "order": 6
+    }
+  ]
+}
