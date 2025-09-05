@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace CarritoCompras.Controllers
 {
     [ApiController]
-    [Route("api/carrito/{cartId}")]
+    [Route("api/carrito/{CarritoId}")]
     public class CartsController : Controller
     {
         private readonly AddItemToCart _addItem; 
@@ -50,49 +50,49 @@ namespace CarritoCompras.Controllers
         }
 
         [HttpPost("producto")]
-        public ActionResult<CartResponse> AddProducto(string cartId, [FromBody] AddToCartRequest body)
+        public ActionResult<CartResponse> AddProducto(string CarritoId, [FromBody] AddToCartRequest body)
         {
             ValidationResult vr = _addValidator.Validate(body);
             if (!vr.IsValid) return BadRequest(ToError(vr));
 
-            var res = _addItem.Execute(cartId, body);
+            var res = _addItem.Execute(CarritoId, body);
             if (!res.EsExitoso) return UnprocessableEntity(new { error = res.Error });
 
-            var (cart, _) = _getCart.Execute(cartId);
+            var (cart, _) = _getCart.Execute(CarritoId);
             return Ok(_mapper.ToResponse(cart!));
         }
 
-        [HttpPut("producto/{itemId:guid}")]
-        public ActionResult<CartResponse> UpdateItem(string cartId, Guid itemId, [FromBody] UpdateItemRequest body)
+        [HttpPut("producto/{ProductoId:guid}")]
+        public ActionResult<CartResponse> UpdateItem(string CarritoId, Guid ProductoId, [FromBody] UpdateItemRequest body)
         {
             ValidationResult vr = _updateValidator.Validate(body);
             if (!vr.IsValid) return BadRequest(ToError(vr));
 
-            var res = _updateItem.Execute(cartId, itemId, body);
+            var res = _updateItem.Execute(CarritoId, ProductoId, body);
             if (!res.EsExitoso) return UnprocessableEntity(new { error = res.Error });
 
-            var (cart, _) = _getCart.Execute(cartId);
+            var (cart, _) = _getCart.Execute(CarritoId);
             return Ok(_mapper.ToResponse(cart!));
         }
 
-        [HttpPatch("producto/{itemId:guid}")]
-        public ActionResult<CartResponse> PatchQuantity(string cartId, Guid itemId, [FromBody] PatchQuantityRequest body)
+        [HttpPatch("producto/{ProductoId:guid}")]
+        public ActionResult<CartResponse> PatchQuantity(string CarritoId, Guid ProductoId, [FromBody] PatchQuantityRequest body)
         {
             ValidationResult vr = _patchValidator.Validate(body);
             if (!vr.IsValid) return BadRequest(ToError(vr));
 
-            var res = _patchQuantity.Execute(cartId, itemId, body.Delta);
+            var res = _patchQuantity.Execute(CarritoId, ProductoId, body.Delta);
             if (!res.EsExitoso) return UnprocessableEntity(new { error = res.Error });
 
-            var (cart, _) = _getCart.Execute(cartId);
+            var (cart, _) = _getCart.Execute(CarritoId);
             return Ok(_mapper.ToResponse(cart!));
         }
 
-        [HttpDelete("producto/{itemId:guid}")]
-        public ActionResult<CartResponse> DeleteItem(string cartId, Guid itemId)
+        [HttpDelete("producto/{ProductoId:guid}")]
+        public ActionResult<CartResponse> DeleteItem(string CarritoId, Guid ProductoId)
         {
 
-            var route = new RemoveItemRequest { CartId = cartId, ItemId = itemId };
+            var route = new RemoveItemRequest { CartId = CarritoId, ItemId = ProductoId };
 
             var vr = _deleteValidator.Validate(route);
             if (!vr.IsValid) return BadRequest(ToError(vr));
@@ -107,9 +107,9 @@ namespace CarritoCompras.Controllers
 
         [HttpGet("producto")]
 
-        public ActionResult<CartResponse> Get(string cartId)
+        public ActionResult<CartResponse> Get(string CarritoId)
         {
-            var (cart, _) = _getCart.Execute(cartId);
+            var (cart, _) = _getCart.Execute(CarritoId);
             if (cart is null) return NotFound();
 
             return Ok(_mapper.ToResponse(cart));
