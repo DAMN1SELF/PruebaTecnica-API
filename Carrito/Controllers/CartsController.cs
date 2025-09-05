@@ -104,6 +104,17 @@ namespace CarritoCompras.Controllers
             return Ok(_mapper.ToResponse(cart!));
         }
 
+
+        [HttpGet("producto")]
+
+        public ActionResult<CartResponse> Get(string cartId)
+        {
+            var (cart, _) = _getCart.Execute(cartId);
+            if (cart is null) return NotFound();
+
+            return Ok(_mapper.ToResponse(cart));
+        }
+
         private static object ToError(ValidationResult vr)
         {
             var errors = vr.Errors
