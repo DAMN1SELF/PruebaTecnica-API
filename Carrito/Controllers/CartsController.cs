@@ -8,23 +8,31 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CarritoCompras.Controllers
 {
+    [ApiController]
+    [Route("api/carrito/{cartId}")]
     public class CartsController : Controller
     {
         private readonly AddItemToCart _addItem; 
         private readonly IValidator<AddToCartRequest> _addValidator;
 
+        private readonly UpdateItemInCart _updateItem;
+        private readonly IValidator<UpdateItemRequest> _updateValidator;
         private readonly GetCart _getCart;
         private readonly ICartMapper _mapper;
         public CartsController(
          AddItemToCart addItem, IValidator<AddToCartRequest> addValidator,
+         UpdateItemInCart updateItem, IValidator<UpdateItemRequest> updateValidator,
          GetCart getCart,
-            ICartMapper mapper
-                        )
+         ICartMapper mapper
+        )
         {
             _addItem = addItem; 
             _mapper = mapper; 
             _getCart = getCart;
-            _addValidator = addValidator;
+            _addValidator = addValidator; 
+            _updateItem = updateItem; 
+            _updateValidator = updateValidator;
+
         }
 
         [HttpPost("producto")]
@@ -39,6 +47,20 @@ namespace CarritoCompras.Controllers
             var (cart, _) = _getCart.Execute(cartId);
             return Ok(_mapper.ToResponse(cart!));
         }
+
+        [HttpPut("producto/{itemId:guid}")]
+        public ActionResult<CartResponse> UpdateItem(string cartId, Guid itemId, [FromBody] UpdateItemRequest body)
+        {
+            ValidationResult vr = _updateValidator.Validate(body);
+            if (!vr.IsValid) return BadRequest(ToError(vr));
+
+            var res = _updateItem.Execute(cartId, itemId, body);
+            if (!res.EsExitoso) return UnprocessableEntity(new { error = res.Error });
+
+            var (cart, _) = _getCart.Execute(cartId);
+            return Ok(_mapper.ToResponse(cart!));
+        }
+
 
         private static object ToError(ValidationResult vr)
         {

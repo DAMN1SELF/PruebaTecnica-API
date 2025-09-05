@@ -1,7 +1,10 @@
+using FluentValidation;
 using INCHE.Carrito_Compras.Application.Mappers;
 using INCHE.Carrito_Compras.Application.Ports;
 using INCHE.Carrito_Compras.Application.UseCases;
+using INCHE.Carrito_Compras.Application.Validation;
 using INCHE.Carrito_Compras.Dtos;
+using INCHE.Carrito_Compras.Dtos.Requests;
 using INCHE.Carrito_Compras.Infraestructure.Persistence;
 using INCHE.Carrito_Compras.Infraestructure.Rules;
 using System.Text.Json;
@@ -29,6 +32,12 @@ builder.Services.AddSingleton<ICartRepository, InMemoryCartRepository>();
 builder.Services.AddSingleton<IProductRuleProvider>(sp => new ProductRuleProviderFromConfig(cfgRoot));
 
 builder.Services.AddScoped<AddItemToCart>();
+builder.Services.AddScoped<IValidator<AddToCartRequest>, AddToCartRequestValidator>();
+
+builder.Services.AddScoped<UpdateItemInCart>();
+builder.Services.AddScoped<IValidator<UpdateItemRequest>, UpdateItemRequestValidator>();
+
+
 builder.Services.AddScoped<GetCart>();
 builder.Services.AddScoped<ICartMapper, CartMapper>();
 
