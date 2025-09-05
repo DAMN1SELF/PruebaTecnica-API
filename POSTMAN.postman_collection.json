@@ -1,0 +1,1134 @@
+{
+	"info": {
+		"_postman_id": "f9c82174-a760-426d-aeff-61a8636bb315",
+		"name": "POSTMAN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25096220"
+	},
+	"item": [
+		{
+			"name": "Modificar Producto",
+			"item": [
+				{
+					"name": "[1]Pan, Complemento y Bebida",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": 3546345,\r\n    \"quantity\": 10,\r\n    \"selections\": [\r\n        {\r\n            \"groupAttributeId\": \"241887\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968636,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"groupAttributeId\": \"241891\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968663,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"groupAttributeId\": \"241892\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968670,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_1}}/producto/{{producto_1}}",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[1]Pan, Complemento y Bebida & Carnes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": 3546345,\r\n  \"quantity\": 1,\r\n  \"selections\": [\r\n    { \"groupAttributeId\": \"241887\", \"attributes\": [ { \"attributeId\": 968636, \"quantity\": 1 } ] },\r\n    { \"groupAttributeId\": \"241888\", \"attributes\": [ { \"attributeId\": 968639, \"quantity\": 2 } ] },\r\n    { \"groupAttributeId\": \"241891\", \"attributes\": [ { \"attributeId\": 968663, \"quantity\": 1 } ] },\r\n    { \"groupAttributeId\": \"241892\", \"attributes\": [ { \"attributeId\": 968670, \"quantity\": 1 } ] }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_1}}/producto/{{producto_1}}",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[2]Pan, Complemento y Bebida & Carnes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": 3546345,\r\n  \"quantity\": 1000,\r\n  \"selections\": [\r\n    { \"groupAttributeId\": \"241887\", \"attributes\": [ { \"attributeId\": 968636, \"quantity\": 1 } ] },\r\n    { \"groupAttributeId\": \"241888\", \"attributes\": [ { \"attributeId\": 968639, \"quantity\": 2 } ] },\r\n    { \"groupAttributeId\": \"241891\", \"attributes\": [ { \"attributeId\": 968663, \"quantity\": 1 } ] },\r\n    { \"groupAttributeId\": \"241892\", \"attributes\": [ { \"attributeId\": 968670, \"quantity\": 1 } ] }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_2}}/producto/{{producto_1}}",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[2]Pan, Complemento y Bebida & Carnes Excede",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": 3546345,\r\n  \"quantity\": 2,\r\n  \"selections\": [\r\n    { \"groupAttributeId\": \"241887\", \"attributes\": [ { \"attributeId\": 968636, \"quantity\": 1 } ] },\r\n    { \"groupAttributeId\": \"241888\", \"attributes\": [ \r\n        { \"attributeId\": 968639, \"quantity\": 1  },\r\n        { \"attributeId\": 968640, \"quantity\": 1  },\r\n        { \"attributeId\": 968641, \"quantity\": 1  },\r\n        { \"attributeId\": 968642, \"quantity\": 1  },\r\n        { \"attributeId\": 968643, \"quantity\": 1  },\r\n        { \"attributeId\": 968644, \"quantity\": 1  }\r\n    \r\n     ] },\r\n    { \"groupAttributeId\": \"241891\", \"attributes\": [ { \"attributeId\": 968663, \"quantity\": 1 } ] },\r\n    { \"groupAttributeId\": \"241892\", \"attributes\": [ { \"attributeId\": 968670, \"quantity\": 1 } ] }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_2}}/producto/{{producto_1}}",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[3]Grupo obligatorio no enviado",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": 3546345,\r\n    \"quantity\": 1,\r\n    \"selections\": [\r\n        {\r\n            \"groupAttributeId\": \"241887\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968636,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"groupAttributeId\": \"241891\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968663,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_3}}/producto/{{producto_1}}",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[3]Sugerencias - Requeridos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": 3546345,\r\n    \"quantity\": 1,\r\n    \"selections\": [\r\n        \r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_1}}/producto/{{producto_1}}",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[3]Cantidad exactas",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": 3546345,\r\n    \"quantity\": 1,\r\n    \"selections\": [\r\n        {\r\n            \"groupAttributeId\": \"241887\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968636,\r\n                    \"quantity\": 1\r\n                },\r\n                {\r\n                    \"attributeId\": 968637,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"groupAttributeId\": \"241891\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968663,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"groupAttributeId\": \"241892\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968670,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_1}}/producto/{{producto_1}}",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[3]Pan, Complemento y Bebida & Cantidad Negativa",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": 3546345,\r\n    \"quantity\": -1,\r\n    \"selections\": [\r\n        {\r\n            \"groupAttributeId\": \"241887\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968636,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"groupAttributeId\": \"241891\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968663,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"groupAttributeId\": \"241892\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968670,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_1}}/producto/{{producto_1}}",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[3]Pan, Complemento y Bebida Inactiva",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": 3546345,\r\n    \"quantity\": 1,\r\n    \"selections\": [\r\n        {\r\n            \"groupAttributeId\": \"241887\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968636,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"groupAttributeId\": \"241891\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968663,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"groupAttributeId\": \"241892\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968677,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_1}}/producto/{{producto_1}}",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[3]Pan, Complemento y Bebida Inexistente",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": 3546345,\r\n    \"quantity\": 1,\r\n    \"selections\": [\r\n        {\r\n            \"groupAttributeId\": \"241887\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968636,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"groupAttributeId\": \"241891\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968663,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"groupAttributeId\": \"241892\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 66666,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_1}}/producto/{{producto_1}}",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[3]Pan, Complemento y Bebida & Toppings",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": 3546345,\r\n  \"quantity\": 1,\r\n  \"selections\": [\r\n    { \"groupAttributeId\": \"241887\", \"attributes\": [ { \"attributeId\": 968637, \"quantity\": 1 } ] },\r\n    { \"groupAttributeId\": \"241889\", \"attributes\": [ \r\n        { \"attributeId\": 968646, \"quantity\": 1 },\r\n         { \"attributeId\": 968647, \"quantity\": 1 },\r\n          { \"attributeId\": 968650, \"quantity\": 1 } \r\n          ] },\r\n    { \"groupAttributeId\": \"241891\", \"attributes\": [ { \"attributeId\": 968664, \"quantity\": 1 } ] },\r\n    { \"groupAttributeId\": \"241892\", \"attributes\": [ { \"attributeId\": 968671, \"quantity\": 1 } ] }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_3}}/producto/{{producto_1}}",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[3]Pan, Complemento y Bebida & Toppings Excede",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": 3546345,\r\n  \"quantity\": 1,\r\n  \"selections\": [\r\n    { \"groupAttributeId\": \"241887\", \"attributes\": [ { \"attributeId\": 968637, \"quantity\": 1 } ] },\r\n    { \"groupAttributeId\": \"241889\", \"attributes\": [ \r\n        { \"attributeId\": 968646, \"quantity\": 1 },\r\n         { \"attributeId\": 968647, \"quantity\": 1 },\r\n          { \"attributeId\": 968648, \"quantity\": 1 } ,\r\n          { \"attributeId\": 968649, \"quantity\": 1 },\r\n          { \"attributeId\": 968650, \"quantity\": 1 } ,\r\n          { \"attributeId\": 968652, \"quantity\": 1 }, \r\n          { \"attributeId\": 968653, \"quantity\": 1 } \r\n\r\n          ] },\r\n    { \"groupAttributeId\": \"241891\", \"attributes\": [ { \"attributeId\": 968664, \"quantity\": 1 } ] },\r\n    { \"groupAttributeId\": \"241892\", \"attributes\": [ { \"attributeId\": 968671, \"quantity\": 1 } ] }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_3}}/producto/{{producto_1}}",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Agregar Producto",
+			"item": [
+				{
+					"name": "[1]Pan, Complemento y Bebida",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": 3546345,\r\n    \"quantity\": 1,\r\n    \"selections\": [\r\n        {\r\n            \"groupAttributeId\": \"241887\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968636,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"groupAttributeId\": \"241891\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968663,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"groupAttributeId\": \"241892\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968670,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_1}}/producto",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[1]Pan, Complemento y Bebida & Carnes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": 3546345,\r\n  \"quantity\": 1,\r\n  \"selections\": [\r\n    { \"groupAttributeId\": \"241887\", \"attributes\": [ { \"attributeId\": 968636, \"quantity\": 1 } ] },\r\n    { \"groupAttributeId\": \"241888\", \"attributes\": [ { \"attributeId\": 968639, \"quantity\": 2 } ] },\r\n    { \"groupAttributeId\": \"241891\", \"attributes\": [ { \"attributeId\": 968663, \"quantity\": 1 } ] },\r\n    { \"groupAttributeId\": \"241892\", \"attributes\": [ { \"attributeId\": 968670, \"quantity\": 1 } ] }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_1}}/producto",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[2]Pan, Complemento y Bebida & Carnes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": 3546345,\r\n  \"quantity\": 1000,\r\n  \"selections\": [\r\n    { \"groupAttributeId\": \"241887\", \"attributes\": [ { \"attributeId\": 968636, \"quantity\": 1 } ] },\r\n    { \"groupAttributeId\": \"241888\", \"attributes\": [ { \"attributeId\": 968639, \"quantity\": 2 } ] },\r\n    { \"groupAttributeId\": \"241891\", \"attributes\": [ { \"attributeId\": 968663, \"quantity\": 1 } ] },\r\n    { \"groupAttributeId\": \"241892\", \"attributes\": [ { \"attributeId\": 968670, \"quantity\": 1 } ] }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_2}}/producto",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[2]Pan, Complemento y Bebida & Carnes Excede",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": 3546345,\r\n  \"quantity\": 2,\r\n  \"selections\": [\r\n    { \"groupAttributeId\": \"241887\", \"attributes\": [ { \"attributeId\": 968636, \"quantity\": 1 } ] },\r\n    { \"groupAttributeId\": \"241888\", \"attributes\": [ \r\n        { \"attributeId\": 968639, \"quantity\": 1  },\r\n        { \"attributeId\": 968640, \"quantity\": 1  },\r\n        { \"attributeId\": 968641, \"quantity\": 1  },\r\n        { \"attributeId\": 968642, \"quantity\": 1  },\r\n        { \"attributeId\": 968643, \"quantity\": 1  },\r\n        { \"attributeId\": 968644, \"quantity\": 1  }\r\n    \r\n     ] },\r\n    { \"groupAttributeId\": \"241891\", \"attributes\": [ { \"attributeId\": 968663, \"quantity\": 1 } ] },\r\n    { \"groupAttributeId\": \"241892\", \"attributes\": [ { \"attributeId\": 968670, \"quantity\": 1 } ] }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_2}}/producto",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[3]Grupo obligatorio no enviado",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": 3546345,\r\n    \"quantity\": 1,\r\n    \"selections\": [\r\n        {\r\n            \"groupAttributeId\": \"241887\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968636,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"groupAttributeId\": \"241891\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968663,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_3}}/producto",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[3]Sugerencias - Requeridos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": 3546345,\r\n    \"quantity\": 1,\r\n    \"selections\": [\r\n        \r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_3}}/producto",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[3]Cantidad exactas",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": 3546345,\r\n    \"quantity\": 1,\r\n    \"selections\": [\r\n        {\r\n            \"groupAttributeId\": \"241887\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968636,\r\n                    \"quantity\": 1\r\n                },\r\n                {\r\n                    \"attributeId\": 968637,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"groupAttributeId\": \"241891\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968663,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"groupAttributeId\": \"241892\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968670,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_3}}/producto",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[3]Pan, Complemento y Bebida & Cantidad Negativa",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": 3546345,\r\n    \"quantity\": -1,\r\n    \"selections\": [\r\n        {\r\n            \"groupAttributeId\": \"241887\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968636,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"groupAttributeId\": \"241891\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968663,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"groupAttributeId\": \"241892\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968670,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_1}}/producto",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[3]Pan, Complemento y Bebida Inactiva",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": 3546345,\r\n    \"quantity\": 1,\r\n    \"selections\": [\r\n        {\r\n            \"groupAttributeId\": \"241887\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968636,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"groupAttributeId\": \"241891\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968663,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"groupAttributeId\": \"241892\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968677,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_1}}/producto",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[3]Pan, Complemento y Bebida Inexistente",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": 3546345,\r\n    \"quantity\": 1,\r\n    \"selections\": [\r\n        {\r\n            \"groupAttributeId\": \"241887\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968636,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"groupAttributeId\": \"241891\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 968663,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"groupAttributeId\": \"241892\",\r\n            \"attributes\": [\r\n                {\r\n                    \"attributeId\": 66666,\r\n                    \"quantity\": 1\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_1}}/producto",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[3]Pan, Complemento y Bebida & Toppings Excede",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": 3546345,\r\n  \"quantity\": 1,\r\n  \"selections\": [\r\n    { \"groupAttributeId\": \"241887\", \"attributes\": [ { \"attributeId\": 968637, \"quantity\": 1 } ] },\r\n    { \"groupAttributeId\": \"241889\", \"attributes\": [ \r\n        { \"attributeId\": 968646, \"quantity\": 1 },\r\n         { \"attributeId\": 968647, \"quantity\": 1 },\r\n          { \"attributeId\": 968648, \"quantity\": 1 } ,\r\n          { \"attributeId\": 968649, \"quantity\": 1 },\r\n          { \"attributeId\": 968650, \"quantity\": 1 } ,\r\n          { \"attributeId\": 968652, \"quantity\": 1 }, \r\n          { \"attributeId\": 968653, \"quantity\": 1 } \r\n\r\n          ] },\r\n    { \"groupAttributeId\": \"241891\", \"attributes\": [ { \"attributeId\": 968664, \"quantity\": 1 } ] },\r\n    { \"groupAttributeId\": \"241892\", \"attributes\": [ { \"attributeId\": 968671, \"quantity\": 1 } ] }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_3}}/producto",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[3]Pan, Complemento y Bebida & Toppings",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": 3546345,\r\n  \"quantity\": 1,\r\n  \"selections\": [\r\n    { \"groupAttributeId\": \"241887\", \"attributes\": [ { \"attributeId\": 968637, \"quantity\": 1 } ] },\r\n    { \"groupAttributeId\": \"241889\", \"attributes\": [ \r\n        { \"attributeId\": 968646, \"quantity\": 1 },\r\n         { \"attributeId\": 968647, \"quantity\": 1 },\r\n          { \"attributeId\": 968650, \"quantity\": 1 } \r\n          ] },\r\n    { \"groupAttributeId\": \"241891\", \"attributes\": [ { \"attributeId\": 968664, \"quantity\": 1 } ] },\r\n    { \"groupAttributeId\": \"241892\", \"attributes\": [ { \"attributeId\": 968671, \"quantity\": 1 } ] }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_3}}/producto",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Modificar Cantidad Producto",
+			"item": [
+				{
+					"name": "[1]Reducir Cantidad",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"delta\": -1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_1}}/producto/{{producto_1}}",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[1]Aumentar Cantidad",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"delta\":1\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_1}}/producto/{{producto_1}}",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[1]Validaciones",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"delta\": -100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/{{carritocompras_1}}/producto/{{producto_1}}",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Obtener Producto",
+			"item": [
+				{
+					"name": "Productos Carrito 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/{{carritocompras_1}}/producto",
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": []
+				},
+				{
+					"name": "Productos Carrito 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/{{carritocompras_2}}/producto",
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": []
+				},
+				{
+					"name": "Productos Carrito 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/{{carritocompras_3}}/producto",
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Eliminar  Producto",
+			"item": [
+				{
+					"name": "[1]Eliminar Producto []",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}/{{carritocompras_1}}/producto/{{producto_1}}",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "[3]Eliminar Producto",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}/{{carritocompras_3}}/producto/{{producto_3}}",
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:5191/api/carrito",
+			"type": "string"
+		},
+		{
+			"key": "carritocompras_1",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "carritocompras_2",
+			"value": "2",
+			"type": "string"
+		},
+		{
+			"key": "carritocompras_3",
+			"value": "3",
+			"type": "string"
+		},
+		{
+			"key": "producto_1",
+			"value": "7420c4ee-7733-4deb-9467-1c03a36d6686",
+			"type": "string"
+		},
+		{
+			"key": "producto_2",
+			"value": "7420c4ee-7733-4deb-9467-1c03a36d6686",
+			"type": "string"
+		},
+		{
+			"key": "producto_3",
+			"value": "7420c4ee-7733-4deb-9467-1c03a36d6686",
+			"type": "string"
+		}
+	]
+}
