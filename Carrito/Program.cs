@@ -43,6 +43,8 @@ builder.Services.AddScoped<IValidator<PatchQuantityRequest>, PatchQuantityReques
 builder.Services.AddScoped<GetCart>();
 builder.Services.AddScoped<ICartMapper, CartMapper>();
 
+builder.Services.AddScoped<RemoveItemFromCart>();
+builder.Services.AddScoped<IValidator<RemoveItemRequest>, RemoveItemRouteRequestValidator>();
 
 var app = builder.Build();
 

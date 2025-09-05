@@ -22,11 +22,16 @@ namespace CarritoCompras.Controllers
 
         private readonly PatchItemQuantity _patchQuantity;
         private readonly IValidator<PatchQuantityRequest> _patchValidator;
+
+        private readonly RemoveItemFromCart _removeItem;
+
+        private readonly IValidator<RemoveItemRequest> _deleteValidator;
+
         public CartsController(
          AddItemToCart addItem, IValidator<AddToCartRequest> addValidator,
          UpdateItemInCart updateItem, IValidator<UpdateItemRequest> updateValidator,
          PatchItemQuantity patchQuantity,IValidator<PatchQuantityRequest> patchValidator,
-
+           RemoveItemFromCart removeItem, IValidator<RemoveItemRequest> deleteValidator,
          GetCart getCart,
          ICartMapper mapper
         )
@@ -39,6 +44,9 @@ namespace CarritoCompras.Controllers
             _updateValidator = updateValidator; 
             _patchQuantity = patchQuantity;
             _patchValidator = patchValidator;
+            _removeItem = removeItem; 
+            _deleteValidator = deleteValidator ;
+
         }
 
         [HttpPost("producto")]
@@ -80,6 +88,21 @@ namespace CarritoCompras.Controllers
             return Ok(_mapper.ToResponse(cart!));
         }
 
+        [HttpDelete("producto/{itemId:guid}")]
+        public ActionResult<CartResponse> DeleteItem(string cartId, Guid itemId)
+        {
+
+            var route = new RemoveItemRequest { CartId = cartId, ItemId = itemId };
+
+            var vr = _deleteValidator.Validate(route);
+            if (!vr.IsValid) return BadRequest(ToError(vr));
+
+            var res = _removeItem.Execute(route.CartId, route.ItemId);
+            if (!res.EsExitoso) return NotFound(new { error = res.Error });
+
+            var (cart, _) = _getCart.Execute(route.CartId);
+            return Ok(_mapper.ToResponse(cart!));
+        }
 
         private static object ToError(ValidationResult vr)
         {
